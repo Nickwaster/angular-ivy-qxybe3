@@ -6,7 +6,7 @@
   <div *ngFor="let produit of products">
 		<app-fiche-produit
       [id]="produit.id"
-      stock="10"
+      [stock]="produit.stock"
       [titre]="produit.title"
       [description]="produit.description"
       [categorie]="produit.category"
