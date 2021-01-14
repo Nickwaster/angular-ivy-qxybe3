@@ -10,7 +10,7 @@ export class AppComponent {
     console.dir(event);
     console.log((event.target as HTMLInputElement).value);
   }
-  prenom = "Fabio";
+  prenom = "Nick";
   products = [
     {
       id: 1,
