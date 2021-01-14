@@ -1,6 +1,6 @@
 <app-menu> Ma boutique en ligne </app-menu>
 
-<app-users-list></app-users-list>
+<!-- <app-users-list></app-users-list>
 
 <section class="flex flex-wrap">
   <div *ngFor="let produit of products">
@@ -14,6 +14,10 @@
       [prix]="produit.price"
     ></app-fiche-produit>
 	</div>
-</section>
+</section> -->
+
+<main>
+  <router-outlet></router-outlet>
+</main>
 
 <footer>Créé par {{ prenom }}</footer>
