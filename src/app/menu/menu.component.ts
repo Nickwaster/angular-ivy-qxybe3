@@ -10,7 +10,8 @@ import { Component, OnInit } from '@angular/core';
 
 
 export class MenuComponent implements OnInit {
-
+  
+  bgColor: string = "purple"
   constructor() { }
 
   ngOnInit(): void {

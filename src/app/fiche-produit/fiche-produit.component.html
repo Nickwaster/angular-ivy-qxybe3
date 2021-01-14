@@ -5,12 +5,15 @@
 		<span class="text-sm ml-3 bg-blue-200 border-blue-700 px-2 rounded-lg">{{categorie}}</span>
 	</div>
 	<img [src]="image" alt="" class="w-64 h-64 mx-auto">
-	<span *ngIf="stock < 10" class="bg-red-600 text-white text-sm p-2">Attention, il n'en reste que {{stock}}</span>
+  <!-- <span
+		*ngIf="stock < 10"
+		class="text-black text-sm p-2"
+		[ngClass]="stock > 5 ? 'bg-yellow-600' : 'bg-red-600'"
+	>Attention, il n'en reste que {{stock}}</span> -->
+	<span class="text-black text-sm p-2" [ngClass]="{'bg-yellow-600': stock > 5, 'bg-red-600': stock <=5 }">Attention, il n'en reste que {{stock}}</span>
 	<div class="flex bg-blue-900 px-3 py-2">
 		<span class="text-white font-bold">{{prix}}</span>
 		<button class="px-3 bg-gray-200 rounded ml-auto" (click)="ajoutPanier()" >Ajouter</button>
 		<!-- Lorsque je clique sur le boutton ajouter, il faudra afficher dans la console: "Produit ajouté au panier" -->
 	</div>
-  <!-- .component.html -->
-
 </article>
