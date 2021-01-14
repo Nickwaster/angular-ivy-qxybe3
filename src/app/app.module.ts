@@ -7,6 +7,7 @@ import { FicheProduitComponent } from "./fiche-produit/fiche-produit.component";
 import { UsersListComponent } from "./users-list/users-list.component";
 import { UserCardComponent } from "./user-card/user-card.component";
 import { HomeComponent } from './pages/home/home.component';
+import { AppRoutingModule } from "../app-routing.module";
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +17,7 @@ import { HomeComponent } from './pages/home/home.component';
     UserCardComponent,
     HomeComponent
   ],
-  imports: [BrowserModule],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent]
 })
