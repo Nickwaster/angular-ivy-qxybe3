@@ -1,0 +1,19 @@
+<app-menu> Ma boutique en ligne </app-menu>
+
+<app-users-list></app-users-list>
+
+<section class="flex flex-wrap">
+  <div *ngFor="let produit of products">
+		<app-fiche-produit
+      [id]="produit.id"
+      stock="10"
+      [titre]="produit.title"
+      [description]="produit.description"
+      [categorie]="produit.category"
+      [image]="produit.image"
+      [prix]="produit.price"
+    ></app-fiche-produit>
+	</div>
+</section>
+
+<footer>Créé par {{ prenom }}</footer>
