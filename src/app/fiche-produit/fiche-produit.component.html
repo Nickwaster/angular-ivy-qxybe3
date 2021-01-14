@@ -11,4 +11,8 @@
 		<button class="px-3 bg-gray-200 rounded ml-auto" (click)="ajoutPanier()" >Ajouter</button>
 		<!-- Lorsque je clique sur le boutton ajouter, il faudra afficher dans la console: "Produit ajouté au panier" -->
 	</div>
+  <!-- .component.html -->
+<div *ngIf="condition; then thenBlock else elseBlock"></div>
+<ng-template #thenBlock>Content to render when condition is true.</ng-template>
+<ng-template #elseBlock>Content to render when condition is false.</ng-template>
 </article>
