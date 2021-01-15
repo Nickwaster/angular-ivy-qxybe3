@@ -1,0 +1,19 @@
+<div class="flex">
+  <section class="flex flex-wrap w-4/5">
+    <div *ngFor="let produit of products">
+      <app-fiche-produit
+        (addToCartEvent)="addToCart($event)"
+        [id]="produit.id"
+        [stock]="produit.stock"
+        [titre]="produit.title"
+        [description]="produit.description"
+        [categorie]="produit.category"
+        [image]="produit.image"
+        [prix]="produit.price"
+      ></app-fiche-produit>
+    </div>
+  </section>
+  <aside class="w-1/5">
+    <app-cart [cart]="cart"></app-cart>
+  </aside>
+</div>

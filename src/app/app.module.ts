@@ -8,6 +8,8 @@ import { UsersListComponent } from "./users-list/users-list.component";
 import { UserCardComponent } from "./user-card/user-card.component";
 import { HomeComponent } from './pages/home/home.component';
 import { AppRoutingModule } from "../app-routing.module";
+import { ShopComponent } from './pages/shop/shop.component';
+import { CartComponent } from './cart/cart.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,7 +17,9 @@ import { AppRoutingModule } from "../app-routing.module";
     FicheProduitComponent,
     UsersListComponent,
     UserCardComponent,
-    HomeComponent
+    HomeComponent,
+    ShopComponent,
+    CartComponent
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
