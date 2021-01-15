@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from "../../product";
 
 @Component({
   selector: 'app-shop',
@@ -6,16 +7,29 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./shop.component.css']
 })
 export class ShopComponent implements OnInit {
-  cart: number[] = []
+  cart: Product[] = []
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  addToCart(id: number) {
-    console.log(id)
-    this.cart.push(id)
+  addToCart(product: any): void {
+    this.cart.push(product)
+  }
+
+  deleteFromCart(id: number): void {
+    /*this.cart.filter(function (product) {
+      if (product.id === id) {
+        // Ne garde pas le produit - donc pas de return
+      } else {
+        // Garde le produit
+        return product
+      }
+    })*/
+
+    // Je filtre mon panier, je ne dois renvoyer que les produits qui n'ont pas l'id de celui que je veux supprimer
+    this.cart = this.cart.filter(produit => produit.id !== id)
   }
 
   products = [

@@ -1,10 +1,13 @@
-<nav [ngStyle]="{'background-color': bgColor}">
-	<h1>
-		<ng-content></ng-content>
-	</h1>
-	<ul>
-	<li class="px-2"><a routerLink="/">Accueil</a></li>
-		<li class="px-2"><a routerLink="/">Produits</a></li>
+<!-- <nav [ngStyle]="{'background-color': bgColor}"> -->
+<nav
+	[ngStyle]="objStyle"
+	class="flex p-2"
+>
+	<h1><ng-content></ng-content></h1>
+	<ul class="ml-auto flex">
+		<li class="px-2"><a routerLink="/">Accueil</a></li>
+		<li class="px-2"><a routerLink="/shop">Produits</a></li>
 		<li class="px-2"><a routerLink="/utilisateurs">Utilisateurs</a></li>
+		<li class="px-2"><a routerLink="/about">A propos</a></li>
 	</ul>
 </nav>

@@ -7,11 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu.component.css']
 })
 
-
-
 export class MenuComponent implements OnInit {
-  
+
   bgColor: string = "purple"
+  objStyle = {
+    'background-color': this.bgColor,
+    'color': "white"
+  }
+
   constructor() { }
 
   ngOnInit(): void {
